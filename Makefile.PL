@@ -3,7 +3,7 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 use lib 'lib';
-eval { require ExtUtils::MakeMaker::METAJSON; };
+eval { require ExtUtils::MakeMaker::JSONMETA; };
 
 WriteMakefile(
   NAME                => 'JSON-CPAN-Meta',
