@@ -3,7 +3,7 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 use lib 'lib';
-use ExtUtils::MakeMaker::METAJSON;
+eval { require ExtUtils::MakeMaker::METAJSON; };
 
 WriteMakefile(
   NAME                => 'JSON-CPAN-META',
@@ -12,5 +12,6 @@ WriteMakefile(
   ABSTRACT_FROM       => 'lib/JSON/CPAN/META.pm',
   PREREQ_PM => {
     'ExtUtils::MakeMaker' => 6, # actual minimum unknown
+    'JSON'                => 2,
   },
 );
