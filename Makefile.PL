@@ -6,10 +6,10 @@ use lib 'lib';
 eval { require ExtUtils::MakeMaker::METAJSON; };
 
 WriteMakefile(
-  NAME                => 'JSON-CPAN-META',
+  NAME                => 'JSON-CPAN-Meta',
   AUTHOR              => 'Ricardo Signes <rjbs@cpan.org>',
-  VERSION_FROM        => 'lib/JSON/CPAN/META.pm',
-  ABSTRACT_FROM       => 'lib/JSON/CPAN/META.pm',
+  VERSION_FROM        => 'lib/JSON/CPAN/Meta.pm',
+  ABSTRACT_FROM       => 'lib/JSON/CPAN/Meta.pm',
   PREREQ_PM => {
     'ExtUtils::MakeMaker' => 6, # actual minimum unknown
     'JSON'                => 2,

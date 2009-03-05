@@ -1,11 +1,11 @@
 use strict;
 use warnings;
-package JSON::CPAN::META;
+package JSON::CPAN::Meta;
 our $VERSION = '1.000';
 
 =head1 NAME
 
-JSON::CPAN::META - JSON is YAML; emit JSON into META.yml
+JSON::CPAN::Meta - JSON is YAML; emit JSON into META.yml
 
 =head1 DESCRIPTION
 
@@ -25,16 +25,16 @@ generate correctly.  Further, JSON documents are valid YAML documents.  Thus, a
 META.yml file may contain JSON without violating the spec or introducing
 the sort of problems you'd expect from a poorly implemented YAML emitter.
 
-JSON-CPAN-META contains plugins to allow distribution-building tools to produce
+JSON-CPAN-Meta contains plugins to allow distribution-building tools to produce
 META.yml files that contain JSON content.
 
 =head1 SEE ALSO
 
-L<ExtUtils::MakeMaker::JSONMETA>
+L<ExtUtils::MakeMaker::METAJSON>
 
-L<Module::Install::JSONMETA>
+L<Module::Install::METAJSON>
 
-L<Module::Build::JSONMETA>
+L<Module::Build::METAJSON>
 
 =head1 AUTHOR AND COPYRIGHT
 
