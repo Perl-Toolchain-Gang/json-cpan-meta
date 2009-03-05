@@ -31,6 +31,8 @@ no warnings 'redefine';
 *ExtUtils::MM_Any::metafile_file = sub {
   my ($self, %pairs) = @_;
 
+  $pairs{generated_by} = join ' version ', __PACKAGE__, __PACKAGE__->VERSION;
+
   return JSON->new->ascii(1)->pretty->encode(\%pairs);
 };
 
