@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-package ExtUtils::MakeMaker::METAJSON;
+package ExtUtils::MakeMaker::JSONMETA;
 our $VERSION = '1.000';
 
 use ExtUtils::MM_Any;
@@ -9,18 +9,18 @@ use JSON 2;
 
 =head1 NAME
 
-ExtUtils::MakeMaker::METAJSON - put JSON in your META.yml (with EU::MM)
+ExtUtils::MakeMaker::JSONMETA - put JSON in your META.yml (with EU::MM)
 
 =head1 SYNOPSIS
 
 In your Makefile.PL:
 
   use ExtUtils::MakeMaker;
-  eval { require ExtUtils::MakeMaker::METAJSON; };
+  eval { require ExtUtils::MakeMaker::JSONMETA; };
 
   WriteMakefile(...);
 
-If EU::MM::METAJSON cannot be loaded (for example, because a user who is
+If EU::MM::JSONMETA cannot be loaded (for example, because a user who is
 installing your module does not have it or JSON installed), things will
 continue as usual.  If it can be loaded, any META.yml file produced will
 contain JSON.

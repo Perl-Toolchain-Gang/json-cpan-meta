@@ -30,11 +30,11 @@ META.yml files that contain JSON content.
 
 =head1 SEE ALSO
 
-L<ExtUtils::MakeMaker::METAJSON>
+L<ExtUtils::MakeMaker::JSONMETA>
 
-L<Module::Install::METAJSON>
+L<Module::Install::JSONMETA>
 
-L<Module::Build::METAJSON>
+L<Module::Build::JSONMETA>
 
 =head1 AUTHOR AND COPYRIGHT
 
