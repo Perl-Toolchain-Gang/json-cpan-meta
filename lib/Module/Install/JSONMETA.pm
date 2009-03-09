@@ -33,7 +33,7 @@ sub jsonmeta {
       $data->{generated_by} &&= __PACKAGE__
                               . ' version '
                               . __PACKAGE__->VERSION;
-      JSON->new->ascii(1)->pretty->encode(shift) . "\n"
+      JSON->new->ascii(1)->pretty->encode($data) . "\n"
     };
     
     $self->admin->write_meta;
