@@ -21,9 +21,11 @@ of using a powerful serialization language without the benefit of a very simple
 and easily understood data format.
 
 JSON, unlike YAML, is lacking in features but is extremely easy to parse and
-generate correctly.  Further, JSON documents are valid YAML documents.  Thus, a
-META.yml file may contain JSON without violating the spec or introducing
-the sort of problems you'd expect from a poorly implemented YAML emitter.
+generate correctly.  Further, JSON documents are almost always valid YAML
+documents.  Thus, a META.yml file may contain JSON without violating the spec
+or introducing the sort of problems you'd expect from a poorly implemented YAML
+emitter.  The next revision of YAML will, hopefully, correct any remaining
+issues.
 
 JSON-CPAN-Meta contains plugins to allow distribution-building tools to produce
 META.yml files that contain JSON content.
