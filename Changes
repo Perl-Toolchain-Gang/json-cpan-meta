@@ -1,4 +1,7 @@
 Revision history for JSON-CPAN-Meta
 
+2.000   2009-03-09
+        implement a Module::Install plugin
+
 1.000   2009-03-04
         first release

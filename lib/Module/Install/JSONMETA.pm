@@ -6,7 +6,7 @@ use Module::Install::Base;
 BEGIN {
   our @ISA = qw(Module::Install::Base);
   our $ISCORE  = 1;
-  our $VERSION = '1.000';
+  our $VERSION = '2.000';
 }
 
 =head1 NAME
@@ -28,7 +28,7 @@ sub jsonmeta {
      die "could not load JSON.pm version 2 or better; can't use jsonmeta\n";
     }
 
-    local *YAML::Tiny::Dump = sub { JSON->new->pretty->ascii->encode(shift) . "\n" };
+    local *YAML::Tiny::Dump = sub { JSON->new->ascii(1)->pretty->encode(shift) . "\n" };
     
     $self->admin->write_meta;
 
