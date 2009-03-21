@@ -1,5 +1,8 @@
 Revision history for JSON-CPAN-Meta
 
+4.000   2009-03-21
+        improve the Module::Install plugin to behave more sensibly (Ash Berlin)
+
 3.000   2009-03-09
         make the Module::Install plugin take the credit/blame for generated_by
         implement a Module::Build helper

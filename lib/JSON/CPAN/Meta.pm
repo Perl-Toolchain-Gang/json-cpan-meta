@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 package JSON::CPAN::Meta;
-our $VERSION = '3.000';
+our $VERSION = '4.000';
 
 =head1 NAME
 
