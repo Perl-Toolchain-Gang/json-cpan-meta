@@ -28,6 +28,14 @@ contain JSON.
 =cut
 
 no warnings 'redefine';
+my $orig = ExtUtils::MM_Any->can('metafile_target');
+*ExtUtils::MM_Any::metafile_target = sub {
+  my $self = shift;
+  my $output = $self->$orig(@_);
+  $output =~ s{META\.yml}{META.json}g;
+  return $output;
+};
+
 *ExtUtils::MM_Any::metafile_file = sub {
   my ($self, %pairs) = @_;
 
