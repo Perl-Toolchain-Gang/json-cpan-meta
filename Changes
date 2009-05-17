@@ -1,5 +1,11 @@
 Revision history for JSON-CPAN-Meta
 
+6.000   2009-05-17
+        we now output META.json files instead of META.yml files
+
+5.000   2009-03-21
+        minor packaging tweak
+
 4.000   2009-03-21
         improve the Module::Install plugin to behave more sensibly (Ash Berlin)
 
