@@ -60,14 +60,10 @@ sub _hook_yaml_tiny {
   }
 }
 
-# This can go away once M::I 0.80 is released, as these subs are what got put
-# into the SVN version of M::I
 sub _hook_admin_metadata {
   my $mi = shift;
 
   return unless $mi->is_admin;
-  my $obj = $mi->admin->load('write_meta');
-  return if $obj->VERSION >= '0.80';
 
   no warnings 'redefine';
   *Module::Install::Admin::Metadata::read_meta = sub {
