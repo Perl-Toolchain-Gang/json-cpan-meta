@@ -11,7 +11,7 @@ BEGIN {
 
 =head1 NAME
 
-Module::Install::JSONMETA - write META.yml with JSON syntax
+Module::Install::JSONMETA - write META.json instead of META.yml
 
 =cut
 
@@ -76,7 +76,7 @@ sub _hook_admin_metadata {
     # Admin time only, so this should be okay to just die
     require YAML::Tiny;
 
-    my @docs = YAML::Tiny::LoadFile('META.yml');
+    my @docs = YAML::Tiny::LoadFile('META.json');
     return $docs[0];
   };
 
@@ -97,28 +97,28 @@ sub _hook_admin_metadata {
     my $self = shift;
     my $ver  = $self->_top->VERSION;
 
-    return unless -f 'META.yml';
+    return unless -f 'META.json';
     return unless $self->meta_generated_by_us($ver);
-    unless (-w 'META.yml') {
-      warn "Can't remove META.yml file. Not writable.\n";
+    unless (-w 'META.json') {
+      warn "Can't remove META.json file. Not writable.\n";
       return;
     }
-    warn "Removing auto-generated META.yml\n";
-    unless ( unlink 'META.yml' ) {
-      die "Couldn't unlink META.yml:\n$!";
+    warn "Removing auto-generated META.json\n";
+    unless ( unlink 'META.json' ) {
+      die "Couldn't unlink META.json:\n$!";
     }
     return;
   };
 
   *Module::Install::Admin::Metadata::write_meta = sub {
     my $self = shift;
-    if ( -f "META.yml" ) {
+    if ( -f "META.json" ) {
       return unless $self->meta_generated_by_us();
     } else {
-      $self->clean_files('META.yml');
+      $self->clean_files('META.json');
     }
-    print "Writing META.yml\n";
-    Module::Install::_write("META.yml", $self->dump_meta);
+    print "Writing META.json\n";
+    Module::Install::_write("META.json", $self->dump_meta);
     return;
   };
 }
