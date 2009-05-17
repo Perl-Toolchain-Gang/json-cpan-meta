@@ -9,7 +9,7 @@ use JSON 2;
 
 =head1 NAME
 
-ExtUtils::MakeMaker::JSONMETA - put JSON in your META.yml (with EU::MM)
+ExtUtils::MakeMaker::JSONMETA - replace META.yml with META.json
 
 =head1 SYNOPSIS
 
