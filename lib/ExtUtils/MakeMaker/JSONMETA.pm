@@ -41,7 +41,7 @@ my $orig = ExtUtils::MM_Any->can('metafile_target');
 
   $pairs{generated_by} = join ' version ', __PACKAGE__, __PACKAGE__->VERSION;
 
-  return JSON->new->ascii(1)->pretty->encode(\%pairs);
+  return JSON->new->ascii(1)->pretty->encode(\%pairs) . "\n";
 };
 
 =head1 SEE ALSO

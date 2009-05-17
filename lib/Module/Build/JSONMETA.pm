@@ -53,7 +53,7 @@ sub write_metafile {
   my $metafile = $self->metafile;
 
   open my $fh, '>', $metafile or die "can't open $metafile for writing: $!";
-  print {$fh} $json           or die "can't print metadata to $metafile: $!";
+  print {$fh} "$json\n"       or die "can't print metadata to $metafile: $!";
   close $fh                   or die "error closing $metafile: $!";
 
   $self->{wrote_metadata} = 1;
