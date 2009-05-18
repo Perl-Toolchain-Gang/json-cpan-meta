@@ -5,7 +5,7 @@ our $VERSION = '6.000';
 
 =head1 NAME
 
-JSON::CPAN::Meta - JSON is YAML; emit JSON into META.yml
+JSON::CPAN::Meta - replace META.yml with META.json
 
 =head1 DESCRIPTION
 

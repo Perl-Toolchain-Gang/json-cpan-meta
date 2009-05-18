@@ -9,7 +9,7 @@ use JSON 2;
 
 =head1 NAME
 
-ExtUtils::MakeMaker::JSONMETA - replace META.yml with META.json
+ExtUtils::MakeMaker::JSONMETA - write META.json instead of META.yml
 
 =head1 SYNOPSIS
 
@@ -22,8 +22,8 @@ In your Makefile.PL:
 
 If EU::MM::JSONMETA cannot be loaded (for example, because a user who is
 installing your module does not have it or JSON installed), things will
-continue as usual.  If it can be loaded, any META.yml file produced will
-contain JSON.
+continue as usual.  If it can be loaded, a META.json file will be produced,
+containing JSON.
 
 =cut
 
