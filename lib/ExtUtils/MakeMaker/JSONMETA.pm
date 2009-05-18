@@ -27,11 +27,11 @@ containing JSON.
 
 =cut
 
-no warnings 'redefine';
-my $orig = ExtUtils::MM_Any->can('metafile_target');
+no warnings qw(once redefine);
+my $orig_m_t = ExtUtils::MM_Any->can('metafile_target');
 *ExtUtils::MM_Any::metafile_target = sub {
   my $self = shift;
-  my $output = $self->$orig(@_);
+  my $output = $self->$orig_m_t(@_);
   $output =~ s{META\.yml}{META.json}g;
   return $output;
 };
@@ -42,6 +42,14 @@ my $orig = ExtUtils::MM_Any->can('metafile_target');
   $pairs{generated_by} = join ' version ', __PACKAGE__, __PACKAGE__->VERSION;
 
   return JSON->new->ascii(1)->pretty->encode(\%pairs) . "\n";
+};
+
+my $orig_d_t = ExtUtils::MM_Any->can('distmeta_target');
+*ExtUtils::MM_Any::distmeta_target = sub {
+  my $self = shift;
+  my $output = $self->$orig_d_t(@_);
+  $output =~ s{META\.yml}{META.json}g;
+  return $output;
 };
 
 =head1 SEE ALSO
