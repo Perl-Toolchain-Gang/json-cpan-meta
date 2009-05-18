@@ -1,5 +1,8 @@
 Revision history for JSON-CPAN-Meta
 
+6.001   2009-05-18
+        minor documentation tweaks
+
 6.000   2009-05-17
         we now output META.json files instead of META.yml files
 

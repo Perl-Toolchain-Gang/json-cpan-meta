@@ -6,7 +6,7 @@ use Module::Install::Base;
 BEGIN {
   our @ISA = qw(Module::Install::Base);
   our $ISCORE  = 1;
-  our $VERSION = '6.000';
+  our $VERSION = '6.001';
 }
 
 =head1 NAME
