@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package ExtUtils::MakeMaker::JSONMETA;
-our $VERSION = '6.001';
+our $VERSION = '7.000';
 
 use ExtUtils::MM_Any;
 use JSON 2;

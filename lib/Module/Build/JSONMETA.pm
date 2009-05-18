@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Module::Build::JSONMETA;
 BEGIN {
-our $VERSION = '6.001';
+our $VERSION = '7.000';
 }
 
 =head1 NAME
