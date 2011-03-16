@@ -6,12 +6,17 @@ use Module::Install::Base;
 BEGIN {
   our @ISA = qw(Module::Install::Base);
   our $ISCORE  = 1;
-  our $VERSION = '7.000';
+  our $VERSION = '7.001';
 }
 
 =head1 NAME
 
-Module::Install::JSONMETA - write META.json instead of META.yml
+Module::Install::JSONMETA - (deprecated) write META.json instead of META.yml
+
+=head1 ACHTUNG
+
+B<Achtung!>  This library will soon be obsolete as EUMM moves to use the
+official L<CPAN::Meta::Spec> JSON files.
 
 =cut
 

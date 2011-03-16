@@ -1,5 +1,11 @@
 Revision history for JSON-CPAN-Meta
 
+7.001     2011-03-15
+
+          note that these tools are on their way to the ash heap
+
+          fix packaging error; META.json amusingly contained YAML
+
 7.000     2009-05-18
           correct a bug in EUMM plugin to add META.json to the manifest
           minor documentation tweaks

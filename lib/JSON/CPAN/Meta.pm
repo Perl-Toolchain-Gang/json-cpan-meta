@@ -1,13 +1,16 @@
 use strict;
 use warnings;
 package JSON::CPAN::Meta;
-our $VERSION = '7.000';
+our $VERSION = '7.001';
 
 =head1 NAME
 
-JSON::CPAN::Meta - replace META.yml with META.json
+JSON::CPAN::Meta - (deprecated) replace META.yml with META.json
 
 =head1 DESCRIPTION
+
+B<Achtung!>  This library will soon be obsolete as tools move to use the
+official L<CPAN::Meta::Spec> JSON files.
 
 CPAN distributions contain a file, F<META.yml>, which contains a description of
 the distribution and its contents.  This document is notionally written in

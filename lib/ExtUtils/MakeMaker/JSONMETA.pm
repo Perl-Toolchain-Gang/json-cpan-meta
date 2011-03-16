@@ -2,16 +2,19 @@ use strict;
 use warnings;
 
 package ExtUtils::MakeMaker::JSONMETA;
-our $VERSION = '7.000';
+our $VERSION = '7.001';
 
 use ExtUtils::MM_Any;
 use JSON 2;
 
 =head1 NAME
 
-ExtUtils::MakeMaker::JSONMETA - write META.json instead of META.yml
+ExtUtils::MakeMaker::JSONMETA - (deprecated) write META.json instead of META.yml
 
 =head1 SYNOPSIS
+
+B<Achtung!>  This library will soon be obsolete as EUMM moves to use the
+official L<CPAN::Meta::Spec> JSON files.
 
 In your Makefile.PL:
 

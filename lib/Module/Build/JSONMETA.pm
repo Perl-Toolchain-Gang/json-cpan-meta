@@ -2,14 +2,17 @@ use strict;
 use warnings;
 package Module::Build::JSONMETA;
 BEGIN {
-our $VERSION = '7.000';
+our $VERSION = '7.001';
 }
 
 =head1 NAME
 
-Module::Build::JSONMETA - write META.json instead of META.yml
+Module::Build::JSONMETA - (depreacted) write META.json instead of META.yml
 
 =head1 SYNOPSIS
+
+B<Achtung!>  This library will soon be obsolete as Module::Build moves to use
+the official L<CPAN::Meta::Spec> JSON files.
 
 This interface may be changed in the future if someone with more Module::Build
 expertise steps forward.
